@@ -3,7 +3,7 @@ import SearchBar from './components/SearchBar';
 import MovieList from './components/MovieList';
 import MovieDetails from './components/MovieDetails';
 import axios from 'axios';
-import logo from './assets/logo.png'; // Import the logo image
+import logo from './assets/Logo.png'; // Import the logo image
 
 const App = () => {
   const [movies, setMovies] = useState([]);
