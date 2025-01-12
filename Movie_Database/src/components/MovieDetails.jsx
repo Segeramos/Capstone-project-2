@@ -8,7 +8,7 @@ const MovieDetails = ({ imdbID, onBackToList }) => {
   useEffect(() => {
     const fetchMovieDetails = async () => {
       try {
-        const response = await axios.get(`http://www.omdbapi.com/?i=${imdbID}&apikey=${import.meta.env.VITE_API_KEY}`);
+        const response = await axios.get(`https://www.omdbapi.com/?i=${imdbID}&apikey=${import.meta.env.VITE_API_KEY}`);
         setMovieDetails(response.data);
         setLoading(false);
       } catch (error) {

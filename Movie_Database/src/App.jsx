@@ -16,7 +16,7 @@ const App = () => {
     setLoading(true); // Start loading
     const genres = ['action', 'comedy', 'drama', 'romance'];
     const moviePromises = genres.map((genre) =>
-      axios.get(`http://www.omdbapi.com/?s=${genre}&apikey=${import.meta.env.VITE_API_KEY}`)
+      axios.get(`https://www.omdbapi.com/?s=${genre}&apikey=${import.meta.env.VITE_API_KEY}`)
     );
     
     try {
@@ -45,7 +45,7 @@ const App = () => {
     setSearchQuery(query); // Update the search query
     setLoading(true); // Start loading when searching
     try {
-      const response = await axios.get(`http://www.omdbapi.com/?s=${query}&apikey=${import.meta.env.VITE_API_KEY}`);
+      const response = await axios.get(`https://www.omdbapi.com/?s=${query}&apikey=${import.meta.env.VITE_API_KEY}`);
       if (response.data.Response === 'False') {
         alert('No movies found');
         setMovies([]); // Clear movies when no results
